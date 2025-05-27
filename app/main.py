@@ -1,23 +1,12 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from app.schemas.input import TestInput
-from app.services.predictor import predict_riasec
-from app.services.storage import save_result
-from app.services.storage import save_result
-
+from app.schemas import TestInput
+from app.model import predict_profile
+from app.storage import save_result
 
 app = FastAPI()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 @app.post("/predict")
-async def get_prediction(input_data: TestInput):
-    profile = predict_riasec(input_data.answers)
-    save_result(input_data.answers, profile)
+async def predict(input_data: TestInput):
+    profile = predict_profile(input_data.answers)
+    save_result(input_data.answers, profile, input_data.student_info)
     return {"profile": profile}
