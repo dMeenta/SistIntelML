@@ -1,4 +1,7 @@
+from app.db import results_collection
+
 def save_result(answers: list[int], profile: str):
-    print("Guardando resultado en log...")
-    print(f"Respuestas: {answers}")
-    print(f"Perfil: {profile}")
+    results_collection.insert_one({
+        "answers": answers,
+        "profile": profile
+    })

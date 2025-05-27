@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.schemas.input import TestInput
 from app.ml.predictor import predict_riasec
 from app.services.storage import save_result
+from app.services.storage import save_result
+
 
 app = FastAPI()
 

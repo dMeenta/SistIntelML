@@ -1,13 +1,9 @@
 from pymongo import MongoClient
-import os
 
-client = MongoClient("mongodb://localhost:27017")
-db = client["vocational_system"]
-collection = db["test_results"]
+# URI para conexión local
+MONGO_URI = "mongodb://localhost:27017"
 
-def save_result(answers, profile):
-    doc = {
-        "answers": answers,
-        "profile": profile
-    }
-    collection.insert_one(doc)
+# Establecer conexión
+client = MongoClient(MONGO_URI)
+db = client["vocational_test"]
+results_collection = db["test_results"]
