@@ -1,21 +1,24 @@
-# Entorno virtual
+# ⛔ Entorno virtual
 .venv/
 venv/
+ENV/
 
-# Archivos de Python
+# ⛔ Archivos de entorno
+.env
+
+# 🧠 Cache y archivos de compilación
 __pycache__/
 *.py[cod]
-*.pyo
+*.so
 
-# Archivos de log
-*.log
+# 🚫 Modelos y datos sensibles
+models/
+data/
+training_log.txt
 
-# Archivos de sistema
-.DS_Store
-Thumbs.db
-
-# Archivos de modelo
+# 🧪 Resultados de entrenamiento
 *.pkl
+*.joblib
+*.csv
 
-# Otros temporales
-*.bak
+# 🔧 Archivos
