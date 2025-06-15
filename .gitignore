@@ -12,7 +12,7 @@ __pycache__/
 *.so
 
 # 🚫 Modelos y datos sensibles
-models/
+ml_models/
 data/
 training_log.txt
 
@@ -20,5 +20,6 @@ training_log.txt
 *.pkl
 *.joblib
 *.csv
+visualizations/
 
 # 🔧 Archivos
