@@ -5,6 +5,7 @@ ENV/
 
 # ⛔ Archivos de entorno
 .env
+./.env
 
 # 🧠 Cache y archivos de compilación
 __pycache__/
