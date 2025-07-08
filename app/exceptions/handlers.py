@@ -2,7 +2,6 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from starlette.status import *
-from .custom_exceptions import PredictionException, UnauthorizedException
 
 def register_exception_handlers(app):
 

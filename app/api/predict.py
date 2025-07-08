@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from models.user_response_model import UserRequest
-from services.prediction_service import predict_major
-from db.mongo import db
+from app.models.user_response_model import UserRequest
+from app.services.prediction_service import predict_major
+from app.db.mongo import db
 
 router = APIRouter()
 

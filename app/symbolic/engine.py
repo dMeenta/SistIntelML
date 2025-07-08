@@ -1,4 +1,4 @@
-from experta import KnowledgeEngine, Fact, Rule, Field, P
+from experta import KnowledgeEngine, Fact, Rule, P
 
 class RIASECFact(Fact):
     R: int

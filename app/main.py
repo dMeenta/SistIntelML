@@ -1,8 +1,9 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api import predict
-from exceptions.handlers import register_exception_handlers
+from app.api import predict
+from app.exceptions.handlers import register_exception_handlers
+
 
 app = FastAPI(
   title="Sistema inteligente para la clasificación del perfil vocacional basado en el modelo RIASEC utilizando razonamiento simbólico",

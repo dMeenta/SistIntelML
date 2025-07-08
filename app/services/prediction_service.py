@@ -1,6 +1,6 @@
 import joblib
-from models.user_response_model import UserTestAnswers
-from symbolic.engine import VocationalEngine
+from app.models.user_response_model import UserTestAnswers
+from app.symbolic.engine import VocationalEngine
 
 EXPLANATIONS = {
     "REALISTIC": "Preferencia por actividades prácticas y manuales",

@@ -18,7 +18,6 @@ data/
 training_log.txt
 
 # 🧪 Resultados de entrenamiento
-*.pkl
 *.joblib
 *.csv
 visualizations/
