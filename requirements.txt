@@ -1,3 +1,4 @@
+pip==23.3.2
 # Core dependencies
 python-dotenv==1.1.1
 PyYAML==6.0
@@ -22,7 +23,7 @@ dnspython==2.7.0
 numpy==1.23.5
 scipy==1.10.1
 scikit-learn==1.2.2
-lightgbm==4.3.2
+lightgbm==4.0.0
 joblib==1.2.0
 threadpoolctl==3.1.0
 imbalanced-learn==0.12.4
