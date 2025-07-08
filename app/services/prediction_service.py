@@ -1,6 +1,7 @@
 import joblib
-from app.models.user_response_model import UserTestAnswers
-from app.symbolic.engine import VocationalEngine
+from models.user_response_model import UserTestAnswers
+from symbolic.engine import VocationalEngine
+import os
 
 EXPLANATIONS = {
     "REALISTIC": "Preferencia por actividades prácticas y manuales",
@@ -20,8 +21,10 @@ DIM_TO_NAME = {
     "C": "CONVENTIONAL"
 }
 
-model = joblib.load("model/model_lgbm.pkl")
-encoder = joblib.load("model/label_encoder_lgbm.pkl")
+model_path = os.path.join("/app", "model", "model_lgbm.pkl")
+encoder_path = os.path.join("/app", "model", "label_encoder_lgbm.pkl")
+model = joblib.load(model_path)
+encoder = joblib.load(encoder_path)
 
 def build_feedback(name: str, profile: str, explanation: str) -> str:
     if profile == "MIXED":

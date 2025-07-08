@@ -1,8 +1,8 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import predict
-from app.exceptions.handlers import register_exception_handlers
+from api import predict
+from exceptions.handlers import register_exception_handlers
 
 
 app = FastAPI(
